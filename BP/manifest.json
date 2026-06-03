@@ -1,0 +1,17 @@
+{
+  "format_version": 2,
+  "header": {
+    "name": "Homem de Ferro - BP",
+    "description": "Comportamentos e Poderes",
+    "uuid": "da74825d-7df6-48c9-95a6-9ba826e79201",
+    "version": [1, 0, 0],
+    "min_engine_version": [1, 20, 0]
+  },
+  "modules": [
+    {
+      "type": "data",
+      "uuid": "b6a831ef-17da-4e4f-b673-9076f7b31d42",
+      "version": [1, 0, 0]
+    }
+  ]
+}
