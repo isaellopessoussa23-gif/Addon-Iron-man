@@ -16,6 +16,9 @@
     },
     "botas_mark3": {
       "textures": "textures/items/botas_mark3"
+    },
+    "repulsor": {
+      "textures": "textures/items/repulsor"
     }
   }
 }
