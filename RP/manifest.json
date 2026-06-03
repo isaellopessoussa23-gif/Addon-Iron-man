@@ -1,0 +1,17 @@
+{
+  "format_version": 2,
+  "header": {
+    "name": "Homem de Ferro - RP",
+    "description": "Texturas e Modelos",
+    "uuid": "f38a52cb-77b1-412d-a261-4de2e76f9215",
+    "version": [1, 0, 0],
+    "min_engine_version": [1, 20, 0]
+  },
+  "modules": [
+    {
+      "type": "resources",
+      "uuid": "1bca96e3-51da-45fc-bc47-0e964cfb31a3",
+      "version": [1, 0, 0]
+    }
+  ]
+}
