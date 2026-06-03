@@ -1,0 +1,43 @@
+{
+  "format_version": "1.20.0",
+  "minecraft:entity": {
+    "description": {
+      "identifier": "ironman:repulsor_shot",
+      "is_spawnable": false,
+      "is_summonable": true,
+      "is_experimental": false
+    },
+    "components": {
+      "minecraft:physics": {
+        "has_gravity": false
+      },
+      "minecraft:projectile": {
+        "on_hit": {
+          "impact_damage": {
+            "damage": 12,
+            "knockback": true,
+            "semi_random_diff_damage": false
+          },
+          "definition_event": {
+            "affect_target": true,
+            "event": "explode"
+          }
+        },
+        "power": 3.5,
+        "gravity": 0.0,
+        "inertia": 1.0,
+        "liquid_inertia": 1.0
+      }
+    },
+    "events": {
+      "explode": {
+        "queue_command": {
+          "command": [
+            "particle minecraft:huge_explosion_emitter ~ ~ ~",
+            "playsound random.explode @a ~ ~ ~ 1 1.5"
+          ]
+        }
+      }
+    }
+  }
+}
