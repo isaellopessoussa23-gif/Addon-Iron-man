@@ -1,0 +1,44 @@
+{
+  "format_version": "1.20.0",
+  "minecraft:entity": {
+    "description": {
+      "identifier": "ironman:unibeam_shot",
+      "is_spawnable": false,
+      "is_summonable": true,
+      "is_experimental": false
+    },
+    "components": {
+      "minecraft:physics": {
+        "has_gravity": false
+      },
+      "minecraft:projectile": {
+        "on_hit": {
+          "impact_damage": {
+            "damage": 24,
+            "knockback": true,
+            "semi_random_diff_damage": false
+          },
+          "definition_event": {
+            "affect_target": true,
+            "event": "super_explosion"
+          }
+        },
+        "power": 5.0,
+        "gravity": 0.0,
+        "inertia": 1.0,
+        "liquid_inertia": 1.0
+      }
+    },
+    "events": {
+      "super_explosion": {
+        "queue_command": {
+          "command": [
+            "particle minecraft:sonic_explosion ~ ~ ~",
+            "playsound ambient.weather.thunder @a ~ ~ ~ 1 0.8",
+            "damage @e[r=4,type=!player] 10"
+          ]
+        }
+      }
+    }
+  }
+}
