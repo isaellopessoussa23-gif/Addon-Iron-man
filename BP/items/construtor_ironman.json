@@ -1,0 +1,36 @@
+{
+  "format_version": "1.20.10",
+  "minecraft:block": {
+    "description": {
+      "identifier": "jarvis:construtor_ironman",
+      "menu_category": {
+        "category": "items",
+        "group": "itemGroup.name.anvil"
+      }
+    },
+    "components": {
+      "minecraft:destructible_by_mining": {
+        "seconds_to_destroy": 3.0
+      },
+      "minecraft:geometry": "geometry.box",
+      "minecraft:material_instances": {
+        "*": {
+          "texture": "construtor_ironman",
+          "render_method": "opaque"
+        }
+      },
+      "minecraft:on_interact": {
+        "event": "jarvis:abrir_menu"
+      }
+    },
+    "events": {
+      "jarvis:abrir_menu": {
+        "run_command": {
+          "command": [
+            "scriptevent jarvis:open_ui"
+          ]
+        }
+      }
+    }
+  }
+}
